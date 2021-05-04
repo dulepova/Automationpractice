@@ -7,31 +7,31 @@ import java.util.Random;
 public class TestDataGenerator {
     public static User getNewValidUser() {
         return User.builder()
-                .firstName("aaa")
-                .lastName("sss")
+                .firstName("Nastia")
+                .lastName("Dulepova")
                 .email(generateNewEmail())
                 .password("Qwerty123")
-                .address("Temeryazeva 12")
+                .address("Dzerzhinskogo 3")
                 .city("Minsk")
                 .state("California")
                 .postalCode("12345")
                 .country("21")
-                .phone("375291111111")
+                .phone("3752977777777")
                 .build();
     }
 
     public static User getRegisteredUser() {
         return User.builder()
-                .firstName("aaa")
-                .lastName("sss")
-                .email("qwerty999@gmail.com")
+                .firstName("Nastia")
+                .lastName("Dulepova")
+                .email("qwerty777@gmail.com")
                 .password("Qwerty123")
-                .address("Temeryazeva 12")
+                .address("Dzerzhinskogo 3")
                 .city("Minsk")
                 .state("California")
                 .postalCode("12345")
                 .country("21")
-                .phone("375291111111")
+                .phone("3752977777777")
                 .build();
     }
 
