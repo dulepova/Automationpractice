@@ -4,20 +4,20 @@ import pages.*;
 
 public class BaseSteps {
 
-    SignInPage signInPage;
+    LoginPage loginPage;
     AccountPage accountPage;
 //    HomePage homePage;
 //    SearchResultPage searchResultPage;
-//    CreateAccountPage createAccountPage;
+    CreateAccountPage createAccountPage;
 //    ProductPage productPage;
 //    OrderPage orderPage;
 
     public BaseSteps() {
 
-        signInPage = new SignInPage();
+        loginPage = new LoginPage();
 //        homePage = new HomePage();
 //        searchResultPage = new SearchResultPage();
-//        createAccountPage = new CreateAccountPage();
+        createAccountPage = new CreateAccountPage();
         accountPage = new AccountPage();
 //        productPage = new ProductPage();
 //        orderPage = new OrderPage();

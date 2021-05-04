@@ -6,11 +6,10 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class SignInPage extends BasePage{
+public class LoginPage extends BasePage{
     private static final String URL = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
 
     private static final By ERROR_SIGN_IN = By.xpath("//div['Authentication failed.']//ol//li");
-    private static final By ERROR_LIST = By.xpath("//div[@class='alert alert-danger']");
     private static final By EMAIL_CREATE_INPUT = By.id("email_create");
     private static final By CREATE_ACCOUNT_BUTTON = By.id("SubmitCreate");
     private static final By EMAIL_INPUT = By.id("email");
@@ -18,17 +17,17 @@ public class SignInPage extends BasePage{
     private static final By LOGIN_BUTTON = By.id("SubmitLogin");
     private static final By MY_ACCOUNT = By.className("navigation_page");
 
-    public SignInPage openPage() {
+    public LoginPage openPage() {
         open(URL);
         return this;
     }
 
-    public SignInPage setEmail(String email) {
+    public LoginPage setEmail(String email) {
         $(EMAIL_INPUT).scrollTo().sendKeys(email);
         return this;
     }
 
-    public SignInPage setPassword(String password) {
+    public LoginPage setPassword(String password) {
         $(PASSWORD_INPUT).sendKeys(password);
         return this;
     }
@@ -37,24 +36,20 @@ public class SignInPage extends BasePage{
         $(LOGIN_BUTTON).click();
     }
 
-    public SignInPage setEmailCreate(String email) {
+    public LoginPage setEmailCreate(String email) {
         $(EMAIL_CREATE_INPUT).sendKeys(email);
         return this;
     }
 
-    public SignInPage clickCreateAccountButton() {
+    public LoginPage clickCreateAccountButton() {
         $(CREATE_ACCOUNT_BUTTON).click();
-        return new SignInPage();
+        return new LoginPage();
     }
-
-    public String getCreateErrorText() {
-        return $$(ERROR_LIST).first().text();
-    }
-    public SignInPage isErrorSectionVisible() {
+    public LoginPage isErrorSectionVisible() {
         $(ERROR_SIGN_IN).shouldBe(Condition.visible);
         return this;
     }
-    public SignInPage signInSuccessful() {
+    public LoginPage signInSuccessful() {
         $(MY_ACCOUNT).shouldBe(Condition.visible);
         return this;
     }

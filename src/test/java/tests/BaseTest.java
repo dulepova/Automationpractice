@@ -3,14 +3,13 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.SignInPage;
 import steps.*;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class BaseTest {
-    SignInSteps signInSteps;
-//    CreateAccountSteps createAccountSteps;
+    LoginSteps loginSteps;
+    CreateAccountSteps createAccountSteps;
 //    OrderSteps orderSteps;
 //    CartSteps cartSteps;
 //    SearchSteps searchSteps;
@@ -24,8 +23,8 @@ public class BaseTest {
         Configuration.startMaximized = true;
         Configuration.timeout = 5000;
 
-        signInSteps = new SignInSteps();
-//        createAccountSteps = new CreateAccountSteps();
+        loginSteps = new LoginSteps();
+        createAccountSteps = new CreateAccountSteps();
 //        orderSteps = new OrderSteps();
 //        cartSteps = new CartSteps();
 //        searchSteps = new SearchSteps();
