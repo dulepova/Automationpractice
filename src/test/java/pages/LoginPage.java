@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage extends BasePage{
     private static final String URL = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
-
     private static final By ERROR_SIGN_IN = By.xpath("//div['Authentication failed.']//ol//li");
     private static final By EMAIL_CREATE_INPUT = By.id("email_create");
     private static final By CREATE_ACCOUNT_BUTTON = By.id("SubmitCreate");

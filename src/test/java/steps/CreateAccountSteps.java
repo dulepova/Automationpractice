@@ -12,7 +12,6 @@ public class CreateAccountSteps extends BaseSteps {
                 .openPage()
                 .setEmailCreate(email)
                 .clickCreateAccountButton();
-
         return this;
     }
     @Step("Click Register Button")
@@ -31,9 +30,7 @@ public class CreateAccountSteps extends BaseSteps {
                 .setCity(user.getCity())
                 .setState(user.getState())
                 .setPostalCode(user.getPostalCode())
-                .setCountry(user.getCountry())
                 .setPhone(user.getPhone());
-
         return this;
     }
 
