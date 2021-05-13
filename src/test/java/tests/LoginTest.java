@@ -6,14 +6,14 @@ import org.testng.annotations.Test;
 import utils.Retry;
 import utils.data.TestDataGenerator;
 
-public class SigiInTest extends BaseTest {
+public class LoginTest extends BaseTest {
     User registeredUser = TestDataGenerator.getRegisteredUser();
     User newUser = TestDataGenerator.getNewValidUser();
 
     @Test(retryAnalyzer = Retry.class)
     @Description("SignIn with not registered User")
     public void signInNotRegisterUser() {
-        signInSteps
+        loginSteps
                 .openPage()
                 .fillSignIn(newUser)
                 .clickSignInButton()
@@ -21,7 +21,7 @@ public class SigiInTest extends BaseTest {
     }
     @Test
     public void signInRegisteredUser() {
-        signInSteps
+        loginSteps
                 .openPage()
                 .fillSignIn(registeredUser)
                 .clickSignInButton()

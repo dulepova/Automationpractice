@@ -11,12 +11,11 @@ public class TestDataGenerator {
                 .lastName("Dulepova")
                 .email(generateNewEmail())
                 .password("Qwerty123")
-                .address("Dzerzhinskogo 3")
-                .city("Minsk")
-                .state("California")
+                .address("Clark Street")
+                .city("Chiсago")
+                .state("Illinois")
                 .postalCode("12345")
-                .country("21")
-                .phone("3752977777777")
+                .phone("+3752977777777")
                 .build();
     }
 
@@ -26,22 +25,12 @@ public class TestDataGenerator {
                 .lastName("Dulepova")
                 .email("qwerty777@gmail.com")
                 .password("Qwerty123")
-                .address("Dzerzhinskogo 3")
-                .city("Minsk")
-                .state("California")
+                .address("Clark Street")
+                .city("Chiсago")
+                .state("Illinois")
                 .postalCode("12345")
-                .country("21")
-                .phone("3752977777777")
+                .phone("+3752977777777")
                 .build();
-    }
-
-    public static Object[][] getSearchTextsWithResultsNumber() {
-        return new Object[][]{
-                {"Dress", 7},
-                {"1231231321", 0},
-                {"Print", 5},
-                {"ewqeqweqwewq", 0},
-        };
     }
 
     private static String generateNewEmail() {
