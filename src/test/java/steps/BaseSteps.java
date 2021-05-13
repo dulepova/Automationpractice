@@ -4,22 +4,23 @@ import pages.*;
 
 public class BaseSteps {
 
-    SignInPage signInPage;
+    LoginPage loginPage;
     AccountPage accountPage;
-//    HomePage homePage;
-//    SearchResultPage searchResultPage;
-//    CreateAccountPage createAccountPage;
-//    ProductPage productPage;
-//    OrderPage orderPage;
+    HomePage homePage;
+    SearchResultPage searchResultPage;
+    CreateAccountPage createAccountPage;
+    ProductPage productPage;
+    OrderPage orderPage;
 
     public BaseSteps() {
 
-        signInPage = new SignInPage();
-//        homePage = new HomePage();
-//        searchResultPage = new SearchResultPage();
-//        createAccountPage = new CreateAccountPage();
+        loginPage = new LoginPage();
+        homePage = new HomePage();
+        searchResultPage = new SearchResultPage();
+        createAccountPage = new CreateAccountPage();
         accountPage = new AccountPage();
-//        productPage = new ProductPage();
-//        orderPage = new OrderPage();
+        productPage = new ProductPage();
+        orderPage = new OrderPage();
+
     }
 }
