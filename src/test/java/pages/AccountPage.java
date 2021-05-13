@@ -22,9 +22,7 @@ public class AccountPage extends BasePage {
     @Step("Navigate to Home Page")
     public HomePage clickOnLogo() {
         $(LOGO).click();
-
         log.info("Click on Logo");
-
         return new HomePage();
     }
 }

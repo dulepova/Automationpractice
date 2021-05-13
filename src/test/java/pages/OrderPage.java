@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.$;
 @Log4j2
 public class OrderPage extends BasePage {
     private static final String URL = "http://automationpractice.com/index.php?controller=order";
-
     private static final By ADDRESS_NAME_TEXT = By.xpath("//li[@class='address_firstname address_lastname']");
     private static final By ADDRESS_STREET_TEXT = By.xpath("//li[@class='address_address1 address_address2']");
     private static final By ADDRESS_PHONE_TEXT = By.xpath("//li[@class='address_phone_mobile']");
