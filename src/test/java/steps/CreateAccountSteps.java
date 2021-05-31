@@ -14,6 +14,7 @@ public class CreateAccountSteps extends BaseSteps {
                 .clickCreateAccountButton();
         return this;
     }
+
     @Step("Click Register Button")
     public CreateAccountSteps register() {
         createAccountPage.clickRegisterButton();
@@ -34,18 +35,18 @@ public class CreateAccountSteps extends BaseSteps {
         return this;
     }
 
-        @Step("Check Registration successful")
-        public void checkRegistrationSuccessful (User user){
-            assertEquals(accountPage.getHeadingUserName(), user.getFirstName() + " " + user.getLastName());
-        }
-
-        @Step("Check Registration error")
-        public void createAccountWithoutEmail (){
-        createAccountPage.createAccountError();
-        }
-
-        @Step("Check error Registered user")
-        public void createRegisteredEmail () {
-            createAccountPage.createRegisteredUserError();
-        }
+    @Step("Check Registration successful")
+    public void checkRegistrationSuccessful(User user) {
+        assertEquals(accountPage.getHeadingUserName(), user.getFirstName() + " " + user.getLastName());
     }
+
+    @Step("Check Registration error")
+    public void createAccountWithoutEmail() {
+        createAccountPage.createAccountError();
+    }
+
+    @Step("Check error Registered user")
+    public void createRegisteredEmail() {
+        createAccountPage.createRegisteredUserError();
+    }
+}

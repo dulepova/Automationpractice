@@ -9,6 +9,7 @@ import steps.*;
 import utils.TestListener;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
 @Listeners(TestListener.class)
 public class BaseTest {
     LoginSteps loginSteps;
@@ -31,6 +32,7 @@ public class BaseTest {
         cartSteps = new CartSteps();
         searchSteps = new SearchSteps();
     }
+
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         if (getWebDriver() != null)

@@ -1,4 +1,5 @@
 package tests;
+
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 import utils.Retry;
@@ -13,6 +14,7 @@ public class SearchTest extends BaseTest {
                 .search("Dress")
                 .numberOfResultShouldBe(7);
     }
+
     @Test(retryAnalyzer = Retry.class)
     @Description("Invalid value search")
     public void searchInValidCategory() {

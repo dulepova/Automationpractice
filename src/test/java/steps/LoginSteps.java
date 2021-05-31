@@ -1,10 +1,11 @@
 package steps;
+
 import io.qameta.allure.Step;
 import models.User;
 
 import static org.testng.Assert.assertEquals;
 
-public class LoginSteps extends BaseSteps{
+public class LoginSteps extends BaseSteps {
     @Step("Open SignIn page")
     public LoginSteps openPage() {
         loginPage.openPage();

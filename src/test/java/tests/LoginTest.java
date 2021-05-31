@@ -19,6 +19,7 @@ public class LoginTest extends BaseTest {
                 .clickSignInButton()
                 .checkNotSuccessfulLogin();
     }
+
     @Test
     public void signInRegisteredUser() {
         loginSteps
